@@ -1,15 +1,16 @@
 import time
 import pandas as pd
 
-COST = 0
-FACNUM = 0
-CUSNUM = 0
-CAPACITY = []
-OPENCOST = []
-STATUS = []
-DEMAND = []
-ASSIGNCOST = []
-ASSIGN = []
+COST = 0 #目标函数
+FACNUM = 0 #工厂数量
+CUSNUM = 0 #顾客数量
+CAPACITY = [] #理论最大值
+LOAD = [] #实际装载量
+OPENCOST = [] #每个fac的打开开销
+STATUS = [] #工厂状态，打开为1，关闭为0
+DEMAND = [] #每个顾客的需求
+ASSIGNCOST = [] #每个工厂对于每个人存放其需求的开销
+ASSIGN = [] #顾客将其需求存放在哪些工厂
 
 def readFile(filePath):
     global COST, FACNUM, CUSNUM, CAPACITY, OPENCOST, DEMAND, ASSIGNCOST, STATUS, ASSIGN
